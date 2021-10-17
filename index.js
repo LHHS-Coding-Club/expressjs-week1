@@ -1,5 +1,3 @@
-// Run app by typing 'node index' in terminal
-
 const express = require('express');
 const app = express();
 
