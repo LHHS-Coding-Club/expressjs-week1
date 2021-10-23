@@ -18,7 +18,7 @@ app.post('/user', (req, res) => {
     res.status(400).send('email already in use');
   } else {
     users.push(newUser);
-    res.send('user created');
+    res.send(users);
   }
   // 200 - OK
   // 400 - failed
@@ -33,6 +33,7 @@ app.put('/user/update', (req, res) => {
   if (userToUpdate) {
     // update name to newName
     userToUpdate.name = newName;
+    res.send(users);
   } else {
     // if the email is not in use
     res.status(400).send('email is not in use');
